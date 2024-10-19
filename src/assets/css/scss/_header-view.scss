@@ -1,0 +1,23 @@
+.header-view {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    mix-blend-mode: difference;
+
+    &-wrapper {
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    h1 {
+        color: white;
+        font-family: arial;
+    }
+
+    h3 {
+        color: white;
+        font-family: arial;
+    }
+}
