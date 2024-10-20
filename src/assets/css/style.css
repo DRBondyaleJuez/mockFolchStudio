@@ -1,6 +1,27 @@
 .header-view {
   position: fixed;
   width: 100%;
+}
+.header-view-wrapper {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+}
+.header-view h1 {
+  color: white;
+}
+.header-view h3 {
+  color: white;
+  mix-blend-mode: difference;
+  filter: grayscale(100%);
+  isolation: isolate;
+}
+
+.header-view {
+  position: fixed;
+  width: 100%;
   z-index: 2;
   mix-blend-mode: difference;
 }
@@ -17,6 +38,27 @@
 .header-view h3 {
   color: white;
   font-family: arial;
+}
+
+.video-interactive-display .media-wrapper {
+  position: relative;
+}
+
+.multi-media-displayer {
+  width: 100%;
+  height: 500px;
+}
+.multi-media-displayer__view {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+}
+.multi-media-displayer .opacity-0 {
+  opacity: 0;
 }
 
 body {
