@@ -1,14 +1,4 @@
 .header-view {
-    position: fixed;
-    width: 100%;
-
-    &-wrapper {
-        padding: 20px 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        mix-blend-mode: difference;
-    }
     
     h1 {
         color: white;
@@ -29,7 +19,7 @@
     mix-blend-mode: difference;
 
     &-wrapper {
-        padding: 20px 40px;
+        padding: 20px 50px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

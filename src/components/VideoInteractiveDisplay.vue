@@ -15,7 +15,7 @@
 import MultiMediaDisplayer from "./MultiMediaDisplayer.vue"
 
 export default {
-    name: "HeaderView",
+    name: "VideoInteractiveDisplay",
     components: {
         MultiMediaDisplayer
     },

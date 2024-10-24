@@ -2,7 +2,7 @@
     <div class="multi-media-displayer">
         <div class="multi-media-displayer__wrapper"
             ref="containerRef"
-            :style="{ width: `${containerWidth}px`, height: `${containerWidth * 0.5625}px` }"
+            :style="{ width: `${containerWidth}px`, height: `${containerWidth * 0.7}px` }"
             @mouseenter="handleMouseEnter"
             @mouseleave="handleMouseLeave"
             @mousemove="handleMouseMove"
@@ -46,7 +46,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 export default {
-  name: 'MediaDisplayer',
+  name: 'MultiMediaDisplayer',
   props: {
     mediaItems: {
       type: Array,
@@ -75,11 +75,17 @@ export default {
     const isHovering = ref(false);
 
     const calculateIndexFromMousePosition = (event) => {
-        console.log(currentIndex);
       if (!containerRef.value) return;
       
       const rect = containerRef.value.getBoundingClientRect();
+      console.log("This is containerRef: ");
+      console.log( containerRef);
+      console.log("This is rect: ");
+      console.log(rect);
       const relativeX = event.clientX - rect.left;
+      console.log("This is event: ");
+      console.log(event);
+      console.log("This is event.clientX: " + event.clientX);
       const segmentWidth = rect.width / props.mediaItems.length;
       const newIndex = Math.floor(relativeX / segmentWidth);
       
@@ -136,5 +142,4 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped></style>
