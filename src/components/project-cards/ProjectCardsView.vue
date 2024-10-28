@@ -1,7 +1,7 @@
 <template>
     <div class="project-cards-view">
         <div v-for="(projectItem, index) in projectList" :key="index">
-            <project-card :projectInfo=projectItem></project-card>
+            <project-card :project-info=projectItem :index="index"></project-card>
         </div>
     </div>
 </template>

@@ -3,10 +3,17 @@
 
     &__glider {
         margin: auto;
+        max-width: 300px;
         width: 100%;
         aspect-ratio: 4/5;
         border-radius: 15px;
         background-color: red;
+
+        .glide-project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__title {

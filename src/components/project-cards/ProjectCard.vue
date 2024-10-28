@@ -1,7 +1,6 @@
 <template>
     <div class="project-card">
-        <div class="project-card__glider">
-        </div>
+        <project-card-glider :project-images="projectInfo.images" :index="index"></project-card-glider>
         <h3 class="project-card__title">
             {{ projectInfo.title }}
         </h3>
@@ -10,16 +9,25 @@
         </p>
 
     </div>
-  </template>
+</template>
   
-  <script>
+<script>
+    import ProjectCardGlider from "./ProjectCardGlider.vue"
+
     export default {
-        name: "HelloWorld",
+        name: "ProjectCard",
         props: {
             projectInfo: {
                 type: Object,
                 required: true
+            },
+            index: {
+                type: Number,
+                required: true
             }
+        },
+        components: {
+            ProjectCardGlider
         }
     };
   </script>
