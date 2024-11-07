@@ -7,12 +7,64 @@
         width: 100%;
         aspect-ratio: 4/5;
         border-radius: 15px;
-        background-color: red;
 
         .glide-project-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .glide {
+            &__track {
+                position: relative;
+            }
+
+            &__bullets {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                display: flex;
+                gap: 5px;
+                width: 93%;
+                height: 4px;
+
+                .glide__bullet {
+                    position: relative;
+                    flex: 1;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #747474;
+                    opacity: 70%;
+
+                    &-reaction--fill {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 0%;
+                        background-color: #f4f4f4;
+                        border-radius: 10px;
+                        transition: width 0s linear;
+                    }
+
+                    &--visited {
+                        background-color: #f4f4f4 !important;
+                    }
+                }
+
+                .glide__bullet--active {
+                    .glide__bullet-reaction {
+                        width: 0%;
+                        transition: width 0s linear;
+                    }
+
+                    .glide__bullet-reaction--fill {
+                        width: 100%;
+                        transition: width 5s linear;
+                    }
+                }
+            }
         }
     }
 
