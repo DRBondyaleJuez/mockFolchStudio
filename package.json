@@ -10,6 +10,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.6.2",
     "core-js": "^3.8.3",
+    "node-sass": "^9.0.0",
     "vue": "^3.2.13"
   },
   "devDependencies": {

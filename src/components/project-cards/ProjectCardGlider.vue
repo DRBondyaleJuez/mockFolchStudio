@@ -94,7 +94,7 @@
         startLoading(currentGlide){
             this.loadingCancelled = false;
             this.startBulletTransition();
-            currentGlide.play(5000);
+            currentGlide.play(3000);
         },
         stopLoading(currentGlide) {
             currentGlide.pause();
@@ -111,7 +111,7 @@
                     const timeout = setTimeout(() => {
                         resolve(true); // Loading completed successfully
                         clearInterval(checkForCancel);
-                    }, 5000);
+                    }, 3000);
 
                     const checkForCancel = setInterval(() => {
                         if (this.loadingCancelled) {

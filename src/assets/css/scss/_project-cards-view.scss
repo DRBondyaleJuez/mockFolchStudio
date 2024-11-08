@@ -1,6 +1,14 @@
 .project-cards-view {
     margin: 0 20px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(3, 1fr)
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8%;
+    justify-content: space-between;
+
+    >div {
+        flex-grow: 1;
+        width: 32.5%;
+        max-width: 32.5%;
+        height: auto;
+    }
 }
