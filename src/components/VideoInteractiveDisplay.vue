@@ -11,7 +11,7 @@
 </template>
 
 <script>
-//import VideoInteractiveDisplay from '../utils/video-interactive-display.js';
+import interactiveDisplayMediaList from '../assets/js/data/interactive-display-media-content.js';
 import MultiMediaDisplayer from "./MultiMediaDisplayer.vue"
 
 export default {
@@ -21,14 +21,7 @@ export default {
     },
     data() { 
         return {
-            mediaList:[
-                { type: 'image', url: "/assets/static/interactive-display-media-content/logo.jpg" },
-                { type: 'image', url:"/assets/static/interactive-display-media-content/janik-charles-my-vibe.jpg" },
-                { type: 'image', url: "/assets/static/interactive-display-media-content/ar-filters.jpg" },
-                { type: 'gif', url: "/assets/static/interactive-display-media-content/innovation-spin.gif" },
-                { type: 'video', url: "/assets/static/interactive-display-media-content/time-is-relative.mp4" },
-                { type: 'image', url: "/assets/static/interactive-display-media-content/xoxo.jpg"}
-            ]
+            mediaList:interactiveDisplayMediaList
         };
     },
     /*

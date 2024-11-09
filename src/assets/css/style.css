@@ -81,8 +81,7 @@ body {
   margin: 0 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8%;
-  justify-content: space-between;
+  gap: 1%;
 }
 .project-cards-view > div {
   flex-grow: 1;

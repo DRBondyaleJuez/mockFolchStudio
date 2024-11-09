@@ -1,7 +1,7 @@
 <template>
     <div class="header-view">
         <div class="header-view-wrapper">
-            <h1>Folch</h1>
+            <h1>Not Real / No Reason</h1>
             <h3>Contact</h3>
         </div>
 

@@ -8,6 +8,7 @@
   
 <script>
     import ProjectCard from "./ProjectCard.vue"
+    import projectsInfoAndMediaList from '../../assets/js/data/projects-info-and-media-list';
 
   export default {
     name: "ProjectCardsView",
@@ -16,7 +17,9 @@
     },
     data() { 
         return {
-            projectList:[
+            projectList: projectsInfoAndMediaList
+            
+            /*[
                 { title: 'Music Videos', 
                 description: 'Record, direct, film and produce music videos', 
                 images: [
@@ -45,7 +48,7 @@
                     "/assets/static/interactive-display-media-content/janik-charles-my-vibe.jpg",
                     "/assets/static/interactive-display-media-content/ar-filters.jpg"
                 ]  },
-            ]
+            ]*/
         };
     },
   };
