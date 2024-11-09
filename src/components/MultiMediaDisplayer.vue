@@ -2,7 +2,7 @@
     <div class="multi-media-displayer">
         <div class="multi-media-displayer__wrapper"
             ref="containerRef"
-            :style="{ width: `${containerWidth}px`, height: `${containerWidth * 0.7}px` }"
+            :style="{ width: `100%`, height: `${containerWidth * 0.7}px` }"
             @mouseenter="handleMouseEnter"
             @mouseleave="handleMouseLeave"
             @mousemove="handleMouseMove"
@@ -51,12 +51,6 @@ export default {
     mediaItems: {
       type: Array,
       required: true,
-      // Expected format:
-      // [{ 
-      //   type: 'image' | 'video' | 'gif',
-      //   url: string,
-      //   thumbnail?: string 
-      // }]
     },
     autoPlayInterval: {
       type: Number,
@@ -78,14 +72,7 @@ export default {
       if (!containerRef.value) return;
       
       const rect = containerRef.value.getBoundingClientRect();
-      console.log("This is containerRef: ");
-      console.log( containerRef);
-      console.log("This is rect: ");
-      console.log(rect);
       const relativeX = event.clientX - rect.left;
-      console.log("This is event: ");
-      console.log(event);
-      console.log("This is event.clientX: " + event.clientX);
       const segmentWidth = rect.width / props.mediaItems.length;
       const newIndex = Math.floor(relativeX / segmentWidth);
       

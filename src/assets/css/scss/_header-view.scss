@@ -14,15 +14,16 @@
 
 .header-view {
     position: fixed;
-    width: 100%;
+    width: 98%;
     z-index: 2;
     mix-blend-mode: difference;
 
     &-wrapper {
-        padding: 20px 50px;
+        padding: 1% 4%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 10%;
     }
     
     h1 {
@@ -33,5 +34,6 @@
     h3 {
         color: white;
         font-family: arial;
+        align-self: center;
     }
 }
